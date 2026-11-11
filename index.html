@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>POSS SWIM 포스스윔 창원점</title>
+<meta name="description" content="창원 명서동 어린이 수영장 포스스윔. 6~13세, 강사 1명이 5명을 맡는 담임제, 대한수영연맹 수영등급제 인증, 해수풀.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="POSS SWIM 포스스윔">
+<meta property="og:title" content="POSS SWIM 포스스윔 창원점 | 가능성을 수영으로 키우는 곳">
+<meta property="og:description" content="6~13세 어린이 수영. 1:5 담임제, 수영등급제 인증, 해수풀. 체험 수업은 카카오톡으로 신청하세요.">
+<meta property="og:url" content="https://possswim.co.kr/">
+<meta property="og:image" content="https://possswim.co.kr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://possswim.co.kr/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0a2d4e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@500;700&display=swap">
+<style>
+/* Layout: 첫 화면·메뉴는 네이비 바탕 + 골드(브랜드), 본문은 흰 바탕 + 네이비 글씨 + 물빛 포인트(학부모용). 한 페이지 안에 메뉴별 구역. */
+:root {
+  --navy: #0a2d4e;
+  --navy-deep: #072340;
+  --gold: #bf9e6d;
+  --ivory: #f3ede2;
+  --sky: #2f7fb5;
+  --sky-soft: #e8f3fb;
+  --mist: #f4f8fb;
+  --ink: #0a2d4e;
+  --ink-2: #46617a;
+  --line: #dfe8f0;
+  --tbd: #fff3c4;
+  --font-serif: "Noto Serif KR", "Nanum Myeongjo", serif;
+  --font-sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #ffffff; color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.7; word-break: keep-all; overflow-wrap: anywhere; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.3; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+img { max-width: 100%; }
+.in { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* 시안 안내 띠 */
+.draft { background: var(--tbd); color: #5a4300; font-size: .85rem; }
+.draft .in { padding-block: 8px; display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.draft button { font: inherit; font-size: .8rem; border: 1px solid #c9a227; background: transparent; color: #5a4300; padding: 3px 10px; border-radius: 999px; cursor: pointer; }
+.tbd { background: var(--tbd); box-shadow: 0 0 0 2px var(--tbd); border-radius: 3px; color: inherit; }
+body.clean .tbd { background: transparent; box-shadow: none; }
+body.clean .draft { display: none; }
+
+/* 메뉴 */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--navy); border-bottom: 1px solid rgba(191, 158, 109, .35); }
+header.top .in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; }
+header.top img { height: 46px; width: auto; display: block; }
+nav.menu { display: flex; gap: 22px; font-size: .92rem; }
+nav.menu a { text-decoration: none; color: #c9d3de; }
+nav.menu a:hover { color: var(--gold); }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .95rem; text-decoration: none; padding: 12px 22px; border-radius: 999px; border: 0; cursor: pointer; font-family: inherit; }
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-line { box-shadow: inset 0 0 0 1px var(--gold); color: var(--ivory); background: transparent; }
+.btn-navy { background: var(--navy); color: #fff; }
+.btn-soft { background: var(--sky-soft); color: var(--navy); }
+header.top .btn { padding: 9px 16px; font-size: .88rem; }
+
+/* 첫 화면 (A) */
+.hero { background: var(--navy); color: var(--ivory); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: auto 0 0 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hero .in { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: center; padding-block: clamp(40px, 8vw, 96px); }
+.hero .in > * { min-width: 0; }
+.eyebrow { font-size: .78rem; letter-spacing: .32em; color: var(--gold); }
+.hero h1 { font-family: var(--font-serif); font-weight: 700; font-size: clamp(2.1rem, 5.4vw, 3.6rem); margin-top: 16px; }
+.hero .lead { color: #c9d3de; margin-top: 18px; max-width: 34ch; font-size: 1.05rem; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+.photo { position: relative; aspect-ratio: 4 / 3; max-width: 100%; overflow: hidden; display: grid; place-items: end start; }
+.photo span { position: relative; z-index: 1; font-size: .74rem; padding: 6px 12px; margin: 12px; border-radius: 999px; }
+.hero .photo { border-radius: 4px; border: 1px solid rgba(191, 158, 109, .5); background: radial-gradient(120% 90% at 70% 20%, #2a6a98 0%, #0d3a62 48%, #072340 100%); }
+.photo.real { display: block; margin: 0; background: none; }
+.photo.real::before { display: none; }
+.photo.real img, .photo.real video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero .photo::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(170deg, rgba(255, 255, 255, .07) 0 2px, transparent 2px 26px); }
+.hero .photo span { color: var(--ivory); border: 1px solid rgba(191, 158, 109, .6); }
+.promise { background: var(--navy-deep); color: var(--ivory); }
+.promise .in { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.promise .in > div { padding: 26px 22px 28px; border-left: 1px solid rgba(191, 158, 109, .3); min-width: 0; }
+.promise .in > div:first-child { border-left: 0; padding-left: 0; }
+.promise b { font-family: var(--font-serif); color: var(--gold); font-size: 1.15rem; display: block; margin-bottom: 4px; }
+.promise p { color: #c9d3de; font-size: .92rem; }
+
+/* 본문 (B) */
+section.band { padding-block: clamp(56px, 8vw, 96px); scroll-margin-top: 70px; }
+section.alt { background: var(--mist); }
+.head { display: grid; gap: 10px; margin-bottom: 32px; max-width: 46rem; }
+.chip { display: inline-block; justify-self: start; font-size: .8rem; font-weight: 700; color: var(--sky); background: var(--sky-soft); padding: 4px 12px; border-radius: 999px; }
+.head h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 900; letter-spacing: -.02em; }
+.head p { color: var(--ink-2); }
+.gold-dot { color: var(--gold); }
+
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 48px); align-items: start; }
+.split > * { min-width: 0; }
+.panel { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+.alt .panel { border-color: transparent; }
+.panel h3 { font-size: 1.25rem; font-weight: 900; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; margin: 16px 0 0; }
+.facts dt { color: var(--ink-2); font-size: .9rem; }
+.facts dd { margin: 0; font-weight: 500; }
+.steps { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; }
+.steps li::before { counter-increment: s; content: counter(s); width: 26px; height: 26px; border-radius: 50%; background: var(--sky-soft); color: var(--sky); font-weight: 700; font-size: .8rem; display: grid; place-items: center; }
+.ticks { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; }
+.ticks li { position: relative; padding-left: 22px; }
+.ticks li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 10px; height: 6px; border-left: 2px solid var(--sky); border-bottom: 2px solid var(--sky); transform: rotate(-45deg); }
+
+.why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.why > div { background: var(--mist); border-radius: 22px; padding: 26px; min-width: 0; }
+.why .num { font-size: 2rem; font-weight: 900; color: var(--sky); letter-spacing: -.02em; }
+.why b { display: block; font-size: 1.1rem; margin-top: 2px; }
+.why p { color: var(--ink-2); font-size: .93rem; margin-top: 6px; }
+
+/* 레벨 */
+.levels { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.levels li { background: var(--mist); border-radius: 18px; padding: 18px 16px 16px; position: relative; min-width: 0; }
+.levels .lv { font-size: .75rem; font-weight: 700; color: var(--gold); letter-spacing: .08em; }
+.levels b { display: block; font-size: 1.02rem; margin-top: 2px; }
+.levels p { color: var(--ink-2); font-size: .85rem; margin-top: 4px; }
+.levels .bar { height: 4px; border-radius: 4px; background: var(--sky-soft); margin-top: 12px; overflow: hidden; }
+.levels .bar i { display: block; height: 100%; background: var(--sky); }
+
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+.gallery figure { margin: 0; border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; min-width: 0; }
+.gallery figure.wide { grid-column: span 2; aspect-ratio: 1400 / 731; }
+.gallery figure:not(.wide) img { object-position: center 30%; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.grades { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grades li { background: var(--mist); border-radius: 18px; padding: 16px; display: grid; grid-template-columns: 34px 1fr; gap: 4px 12px; align-items: center; min-width: 0; }
+.grades .cap { width: 34px; height: 24px; border-radius: 17px 17px 6px 6px; grid-row: span 2; box-shadow: inset 0 -3px 0 rgba(0,0,0,.08); }
+.grades .g { font-size: .78rem; font-weight: 700; color: var(--gold); letter-spacing: .06em; }
+.grades b { font-size: 1rem; }
+.grades .dist { display: block; font-size: .78rem; font-weight: 500; color: var(--ink-2); }
+.grades .cap { border: 1px solid var(--line); }
+.masters { margin-top: 12px; background: var(--navy); color: var(--ivory); border-radius: 18px; padding: 18px 22px; display: flex; gap: 12px 24px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.masters b { font-family: var(--font-serif); color: var(--gold); font-size: 1.1rem; }
+.level-photo { margin: 24px 0 0; border-radius: 22px; overflow: hidden; aspect-ratio: 16 / 7; max-width: 100%; }
+.level-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 안전과 물 */
+.water-note { margin-top: 20px; background: var(--navy); color: #fff; border-radius: 22px; padding: 22px 26px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.water-note small { display: block; color: #9cc9e6; font-size: .8rem; }
+.water-note b { font-size: 1.05rem; }
+
+/* 지점 */
+.branch { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; }
+.branch > * { min-width: 0; }
+.mapbox { border-radius: 22px; background: linear-gradient(160deg, #cfe6f4 0%, #a5d0ea 100%); min-height: 260px; position: relative; overflow: hidden; display: grid; place-items: center; }
+.mapbox::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,.35) 0 1px, transparent 1px 34px), repeating-linear-gradient(90deg, rgba(255,255,255,.35) 0 1px, transparent 1px 34px); }
+.mapbox .pin { position: relative; background: var(--navy); color: #fff; font-weight: 700; font-size: .9rem; padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 20px rgba(10, 45, 78, .25); }
+
+.space { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+.space figure { margin: 0; position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; min-width: 0; }
+.space img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.space figcaption { position: absolute; left: 10px; bottom: 10px; background: rgba(10, 45, 78, .82); color: #fff; font-size: .78rem; padding: 4px 10px; border-radius: 999px; }
+.storefront { margin: 0; position: relative; border-radius: 22px; overflow: hidden; min-height: 300px; background: linear-gradient(160deg, #cfe6f4 0%, #a5d0ea 100%); display: grid; place-items: end center; }
+.storefront img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.storefront .pin { position: relative; margin-bottom: 16px; background: var(--navy); color: #fff; font-weight: 700; font-size: .9rem; padding: 10px 16px; border-radius: 999px; box-shadow: 0 8px 20px rgba(10, 45, 78, .25); }
+/* 상담 */
+.cta { background: var(--navy); color: var(--ivory); }
+.cta .in { padding-block: clamp(48px, 7vw, 80px); display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.cta h2 { font-family: var(--font-serif); font-size: clamp(1.6rem, 3.6vw, 2.3rem); }
+.cta p { color: #c9d3de; margin-top: 8px; }
+.copyline { font-size: .85rem; color: #c9d3de; margin-top: 10px; }
+.copyline code { font-family: inherit; color: var(--gold); user-select: all; }
+
+footer { background: var(--navy-deep); color: #9fb0c2; font-size: .82rem; }
+footer .in { padding-block: 32px 40px; display: grid; gap: 10px; }
+footer img { height: 40px; width: auto; }
+footer .row { display: flex; gap: 6px 18px; flex-wrap: wrap; }
+footer a { color: #9fb0c2; }
+
+/* 아래 고정 상담 버튼 (모바일) */
+.float { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 25; display: none; }
+.float .btn { box-shadow: 0 10px 24px rgba(10, 45, 78, .3); }
+
+@media (max-width: 900px) {
+  .levels, .grades { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: 1fr; }
+  .space { grid-template-columns: 1fr 1fr; }
+  .gallery figure.wide { grid-column: auto; }
+}
+@media (max-width: 760px) {
+  nav.menu { display: none; }
+  .hero .in, .split, .branch { grid-template-columns: 1fr; }
+  .promise .in, .why { grid-template-columns: 1fr; }
+  .promise .in > div { border-left: 0; padding-left: 0; border-top: 1px solid rgba(191, 158, 109, .3); }
+  .promise .in > div:first-child { border-top: 0; }
+  .float { display: block; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn { transition: transform .15s ease, box-shadow .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .levels li { transition: transform .2s ease; }
+  .levels li:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+
+
+<header class="top">
+  <div class="in">
+    <a href="#home" aria-label="POSS SWIM 처음으로"><img src="assets/logo-gold.png" alt="POSS SWIM"></a>
+    <nav class="menu" aria-label="주요 메뉴">
+      <a href="#classes">수업 안내</a>
+      <a href="#levels">레벨</a>
+      <a href="#safety">안전과 물</a>
+      <a href="#branch">지점 안내</a>
+    </nav>
+    <a class="btn btn-gold" href="https://open.kakao.com/o/sBaT7j3f" target="_blank" rel="noopener">카톡 상담</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="in">
+      <div>
+        <p class="eyebrow">MORE POSSIBLE WITH SWIM</p>
+        <h1 id="hero-title">가능성을<br>수영으로 키우는 곳</h1>
+        <p class="lead">강사 1명이 아이 5명만 맡는 담임제 수업. 6세부터 13세까지, 아이의 속도에 맞춰 가르칩니다.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#contact">체험 수업 신청</a>
+          <a class="btn btn-line" href="#classes">수업 안내 보기</a>
+        </div>
+      </div>
+      <figure class="photo real"><video id="hero-video" src="assets/photos/pool-loop.mp4" poster="assets/photos/pool-loop-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="POSS SWIM 창원점 25m 5레인 수영장 영상"></video></figure>
+    </div>
+  </section>
+
+  <div class="promise">
+    <div class="in">
+      <div><b>1:5 담임제</b><p>담임이 아이의 레벨과 성격을 알고 매달 성장을 알려드립니다.</p></div>
+      <div><b>단계별 레벨 수업</b><p>물 적응부터 4가지 영법까지, 단계마다 목표가 분명합니다.</p></div>
+      <div><b>해수풀</b><p>바닷물 수영장으로 운영하고, 하루 8~9번 물 전체를 여과합니다.</p></div>
+    </div>
+  </div>
+
+  <section class="band" id="why" aria-labelledby="why-title">
+    <div class="in">
+      <div class="head">
+        <span class="chip">POSS SWIM이 다른 점</span>
+        <h2 id="why-title">이름의 뜻은 <span class="gold-dot">POSSIBILITY</span>, 아이들의 가능성입니다</h2>
+        <p>물을 무서워하던 아이가 처음 얼굴을 담그는 날, 혼자 25m를 처음 건너는 날. POSS SWIM은 그 순간들을 함께 만듭니다.</p>
+      </div>
+      <div class="why">
+        <div><span class="num">1:5</span><b>담임제 수업</b><p>강사 1명이 아이 5명만 맡습니다. 같은 담임이 꾸준히 가르쳐 아이가 낯가림 없이 배웁니다.</p></div>
+        <div><span class="num">8급→1급</span><b>수영등급제 수업</b><p>대한수영연맹 수영등급제 인증 수영장입니다. 연맹 기준으로 배우고 평가받습니다.</p></div>
+        <div><span class="num">25m</span><b>5레인 수영장</b><p>아이 키에 맞춰 수심을 조절합니다. 처음 오는 아이도 발이 닿는 곳에서 시작합니다.</p></div>
+      </div>
+      <div class="gallery">
+        <figure class="wide"><img src="assets/photos/gold-letters.jpg" alt="네이비 타일 벽의 골드 POSS SWIM 로고 사인" loading="lazy" width="1400" height="731"></figure>
+        <figure><img src="assets/photos/class-lesson.jpg" alt="강사가 레인에서 아이들을 지도하는 수업 장면" loading="lazy" width="1600" height="1200"></figure>
+        <figure><img src="assets/photos/class-lanes.jpg" alt="레인별로 아이들이 수영하는 수업 장면" loading="lazy" width="1600" height="1200"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="classes" aria-labelledby="classes-title">
+    <div class="in">
+      <div class="head">
+        <span class="chip">수업 안내</span>
+        <h2 id="classes-title">어린이반과 성인반</h2>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h3>어린이반</h3>
+          <dl class="facts">
+            <dt>대상</dt><dd>6세 ~ 13세 (유치부·초등)</dd>
+            <dt>반 구성</dt><dd>강사 1명 : 아이 5명, 레벨별 편성</dd>
+            <dt>횟수</dt><dd>주 1회 · 2회 · 3회</dd>
+            <dt>운영 시간</dt><dd>오후 2시 ~ 마지막 수업 오후 8시</dd>
+            <dt>휴원</dt><dd>일요일, 공휴일, 5주차 (공휴일은 운영할 때도 있어 미리 안내)</dd>
+            <dt>특별반</dt><dd>마스터반(상급), 교정반, 방학 특강</dd>
+          </dl>
+          <ol class="steps" aria-label="수업 진행 순서">
+            <li>출석과 몸 상태 확인</li>
+            <li>준비 운동과 물 적응</li>
+            <li>지난 시간 복습</li>
+            <li>오늘의 목표 기술</li>
+            <li>놀이로 마무리, 오늘 잘한 것 한 가지 칭찬</li>
+          </ol>
+        </div>
+        <div class="panel">
+          <h3>성인반</h3>
+          <dl class="facts">
+            <dt>시간</dt><dd>오전 6시 · 7시, 오후 9시</dd>
+            <dt>횟수</dt><dd>주 2회 · 3회 · 5회</dd>
+            <dt>반 구성</dt><dd>초·중급반, 중·고급반 (강사 1명 : 10명)</dd>
+            <dt>접수</dt><dd>매월 26일 오후 1시부터 카카오톡 선착순</dd>
+          </dl>
+          <h3 style="margin-top:26px">학부모님께 드리는 것</h3>
+          <ul class="ticks">
+            <li>승급할 때 축하 알림</li>
+            <li>통유리 대기 공간에서 수업을 직접 보실 수 있습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="levels" aria-labelledby="levels-title">
+    <div class="in">
+      <div class="head">
+        <span class="chip">레벨 체계</span>
+        <h2 id="levels-title">한 계단씩, 아이가 성장을 눈으로 봅니다</h2>
+        <p>대한수영연맹 수영등급제를 그대로 따릅니다. 8급부터 1급까지 주차별 계획이 정해진 62주 과정으로 배우고, 연맹 평가표(발차기·팔 동작·연결 동작)로 평가해 승급합니다. 급마다 수모 색이 바뀌어 아이가 자기 성장을 눈으로 봅니다. 진도는 아이마다 다를 수 있습니다.</p>
+      </div>
+      <ol class="grades">
+        <li><span class="cap" style="background:#ffffff"></span><span class="g">8급</span><b>자유형 발차기 <small class="dist">킥판 잡고 25m · 1~8주</small></b></li>
+        <li><span class="cap" style="background:#f2d43a"></span><span class="g">7급</span><b>자유형 <small class="dist">25m · 9~16주</small></b></li>
+        <li><span class="cap" style="background:#6fd3cc"></span><span class="g">6급</span><b>배영 발차기 <small class="dist">25m · 17~22주</small></b></li>
+        <li><span class="cap" style="background:#f2867a"></span><span class="g">5급</span><b>배영 <small class="dist">25m · 23~28주</small></b></li>
+        <li><span class="cap" style="background:#2fa84f"></span><span class="g">4급</span><b>평영 발차기 <small class="dist">킥판 잡고 25m · 29~35주</small></b></li>
+        <li><span class="cap" style="background:#2348c8"></span><span class="g">3급</span><b>평영 <small class="dist">25m · 36~44주</small></b></li>
+        <li><span class="cap" style="background:#e02b2b"></span><span class="g">2급</span><b>접영 발차기 <small class="dist">킥판 잡고 25m · 45~51주</small></b></li>
+        <li><span class="cap" style="background:#3a3a3a"></span><span class="g">1급</span><b>접영 <small class="dist">25m · 52~62주</small></b></li>
+      </ol>
+      <div class="masters"><div><b>MASTERS 3 → 2 → 1</b><p style="color:#c9d3de;font-size:.92rem">1급을 마친 아이의 상급 과정. M3 개인혼영 100m 완주·스타트·턴, M2·M1 학년·성별 기준기록 통과</p></div><a class="btn btn-gold" href="#contact">레벨 테스트 신청</a></div>
+      <figure class="level-photo"><img src="assets/photos/level-wall.jpg" alt="급별 수모와 주차별 과정이 게시된 레벨 보드" loading="lazy" width="1600" height="1200"></figure>
+    </div>
+  </section>
+
+  <section class="band alt" id="safety" aria-labelledby="safety-title">
+    <div class="in">
+      <div class="head">
+        <span class="chip">안전과 깨끗한 물</span>
+        <h2 id="safety-title">부모님이 가장 걱정하는 두 가지, 매일 지킵니다</h2>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h3>안전</h3>
+          <ul class="ticks">
+            <li>아이 나이와 레벨에 맞게 수심을 조절합니다</li>
+            <li>모든 강사가 수상인명구조 자격과 생활체육지도자 자격을 갖추고 있습니다</li>
+            <li>아이는 보호자께 직접 인계합니다</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>깨끗한 물</h3>
+          <ul class="ticks">
+            <li><b>해수풀</b>로 운영합니다</li>
+            <li>하루 8~9번 수영장 물 전체를 여과합니다</li>
+            <li>매일 수온과 수질을 체크합니다</li>
+            <li>외부 기관 수질 검사 결과를 수영장에 게시합니다</li>
+            <li>입수 전 샤워를 꼭 안내합니다</li>
+          </ul>
+          <div class="water-note">
+            <div><small>POSS SWIM의 물</small><b>해수풀 · 하루 8~9회 여과</b></div>
+            <p style="max-width:30ch;color:#d6e4ef;font-size:.92rem">바닷물로 채운 수영장에서, 물 전체가 하루 8~9번 여과 장치를 거쳐 다시 들어옵니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="branch" aria-labelledby="branch-title">
+    <div class="in">
+      <div class="head">
+        <span class="chip">지점 안내</span>
+        <h2 id="branch-title">POSS SWIM 창원점</h2>
+      </div>
+      <div class="branch">
+        <figure class="storefront"><img src="assets/photos/exterior.jpg" alt="BYC 건물 1층 입구의 POSS SWIM 수영장 간판" loading="lazy" width="651" height="499"><span class="pin">창원 의창구 명서동 · BYC 건물 B1</span></figure>
+        <div class="panel">
+          <dl class="facts">
+            <dt>주소</dt><dd>경남 창원시 의창구 우곡로 205, BYC 건물 지하 1층</dd>
+            <dt>시설</dt><dd>25m 5레인, 대한수영연맹 공식 인증 수영장</dd>
+            <dt>어린이반</dt><dd>오후 2시 ~ 마지막 수업 오후 8시</dd>
+            <dt>성인반</dt><dd>06:00 · 07:00 · 21:00</dd>
+            <dt>휴원</dt><dd>일요일, 공휴일, 5주차 (공휴일은 운영할 때도 있어 미리 안내)</dd>
+            <dt>주차</dt><dd>건물 주차 가능 (공간이 좁습니다)</dd>
+            <dt>대기 공간</dt><dd>통유리로 수업을 볼 수 있는 학부모 대기 공간</dd>
+            <dt>전화</dt><dd><a href="tel:01027116009">010-2711-6009</a></dd>
+            <dt>상담</dt><dd>카카오톡 오픈채팅 (인스타그램 DM은 받지 않습니다)</dd>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-navy" href="https://map.naver.com/p/search/%ED%8F%AC%EC%8A%A4%EC%8A%A4%EC%9C%94%20%EC%B0%BD%EC%9B%90%EC%A0%90" target="_blank" rel="noopener">네이버 지도</a>
+            <a class="btn btn-soft" href="https://www.instagram.com/possswim_cw/" target="_blank" rel="noopener">인스타그램</a>
+          </div>
+        </div>
+      </div>
+      <div class="space">
+        <figure><img src="assets/photos/viewing-glass.jpg" alt="대기 공간 통유리 너머로 보이는 수업" loading="lazy" width="1600" height="1200"><figcaption>통유리 관람</figcaption></figure>
+        <figure><img src="assets/photos/lounge.jpg" alt="테이블이 놓인 학부모 대기 공간" loading="lazy" width="1600" height="1200"><figcaption>대기 공간</figcaption></figure>
+        <figure><img src="assets/photos/locker.jpg" alt="수납함이 있는 탈의실" loading="lazy" width="1600" height="1200"><figcaption>탈의실</figcaption></figure>
+        <figure><img src="assets/photos/entrance-neon.jpg" alt="네이비 타일 벽과 로고 조명이 있는 입구" loading="lazy" width="1100" height="1466"><figcaption>입구</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-labelledby="contact-title">
+    <div class="in">
+      <div>
+        <h2 id="contact-title">체험 수업으로 먼저 만나보세요</h2>
+        <p>아이 나이와 수영 경험, 원하는 요일을 카카오톡으로 알려주시면 담임 선생님이 레벨을 확인해 드립니다.</p>
+        <p class="copyline">오픈채팅 주소: <code>open.kakao.com/o/sBaT7j3f</code> · 전화 <code>010-2711-6009</code></p>
+      </div>
+      <a class="btn btn-gold" href="https://open.kakao.com/o/sBaT7j3f" target="_blank" rel="noopener">카톡으로 체험 신청</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <img src="assets/logo-gold.png" alt="POSS SWIM">
+    <div class="row"><span>주식회사 포스스윔</span><span>사업자등록번호 638-86-02898</span><span>경남 창원시 의창구 우곡로 205, 지하 1층</span><span>대표전화 010-2711-6009</span></div>
+    <div class="row"><a href="privacy.html">개인정보처리방침</a><span aria-hidden="true">·</span><span>© 2026 POSS SWIM</span></div>
+  </div>
+</footer>
+
+<div class="float"><a class="btn btn-gold" href="https://open.kakao.com/o/sBaT7j3f" target="_blank" rel="noopener">카톡 상담</a></div>
+
+<script>
+(function () {
+  var v = document.getElementById('hero-video');
+  if (v && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); }
+})();
+</script>
+
+</body>
+</html>
